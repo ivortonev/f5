@@ -1,0 +1,5 @@
+when HTTP_REQUEST {
+  if { ( [HTTP::host] equals "xyz.void.net" ) and ( [matchclass [IP::remote_addr] equals iRule_DGL_xyz.void.net] )  } {
+    pool POOL_XYZ
+  }
+}
